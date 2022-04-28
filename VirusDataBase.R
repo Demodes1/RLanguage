@@ -83,4 +83,19 @@ sprintf("Virus original %s ", dVS)
 sprintf("Complementaria %s ", dVSC)
 
 
+# Segmentos del virus H1N1 de México en el 2008
+
+iV <- read_fasta("./InfluenzaAMex.fasta")
+
+iVDNA <- dna(iV) # ADN del virus de la Influenza
+
+iVRNA <- seq_transcribe(iVDNA) # ARN del virus de la Influenza
+
+iVAA <- seq_translate(iVDNA) # Secuencia de aminoacidos del virus de la influenza
+
+iVDNAComp <- seq_complement(iVDNA) # Obtencion del complemento de la secuencia de ADN
+
+iVDNACompRev <- seq_reverse(iVDNAComp) # Secuencia complemento inversa
+
+
 
