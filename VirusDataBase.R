@@ -24,8 +24,8 @@ zVS <- read_fasta("./Zikavirus.fasta") # Formato bioseq
 # cV <- read.fasta("")  # Formato seqinr
 # cVS <- read_fasta("") # Formato bioseq
 
-# wV <- read.fasta("")  # Formato seqinr
-# wVS <- read_fasta("") # Formato bioseq
+wV <- read.fasta("./wuhan.fasta")  # Formato seqinr
+wVS <- read_fasta("./wuhan.fasta") # Formato bioseq
 
 mV <- read.fasta("./MERS")  # Formato seqinr
 mVS <- read_fasta("./MERS") # Formato bioseq
@@ -37,7 +37,7 @@ dVS <- read_fasta("./DengueVirus.fasta") # Formato bioseq
 # ----------- ¿Cual es el tamaño de cada secuencia? -----------
 
 sprintf("Virus del Zika: %a proteínas", length(zV[[1]]))
-#sprintf("Virus : % proteínas", length(zV[[1]]))
+sprintf("Virus Wuhan Hu-1: %s proteínas", length(wV[[1]]))
 #sprintf("Virus : %s proteínas", length(zV[[1]]))
 sprintf("Virus del MERS : %s proteínas", length(mV[[1]]))
 sprintf("Virus del Dengue: %s proteínas", length(dV[[1]]))
@@ -46,7 +46,7 @@ sprintf("Virus del Dengue: %s proteínas", length(dV[[1]]))
 # ----------- ¿Cúal es la composición de nucleótidos de cada secuencia? -----------
 
 count(zV[[1]],1) # Virus del Zika
-#count(V[[1]],1) # Virus del
+count(wV[[1]],1) # Virus del Wuhan-Hu-1
 #count(V[[1]],1) # Virus del
 count(mV[[1]],1) # Virus del MERS
 count(dV[[1]],1) # Virus del Dengue
@@ -55,7 +55,7 @@ count(dV[[1]],1) # Virus del Dengue
 # ----------- ¿Cuál es el contenido de GC de cada virus? -----------
 
 print(GC(zV[[1]])) # Virus del Zika
-# print(GC(V[[1]])) # Virus del
+print(GC(wV[[1]])) # Virus del Wuhan-Hu-1
 # print(GC(V[[1]])) # Virus del 
 print(GC(mV[[1]])) # Virus del MERS
 print(GC(dV[[1]])) # Virus del Dengue
@@ -66,9 +66,9 @@ zVSC <- seq_complement(zVS) # Virus del Zika
 sprintf("Virus original %s ", zVS)
 sprintf("Complementaria %s ", zVSC)
 
-#zVSC <- seq_complement(zVS) # Virus del 
-#sprintf("Virus original %s ", zVS)
-#sprintf("Complementaria %s ", zVSC)
+wVSC <- seq_complement(wVS) # Virus del Wuhan-Hu-1
+sprintf("Virus original %s ", wVS)
+sprintf("Complementaria %s ", wVSC)
 
 #zVSC <- seq_complement(zVS) # Virus del 
 #sprintf("Virus original %s ", zVS)
