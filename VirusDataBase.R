@@ -21,8 +21,8 @@ library(bioseq)
 zV <- read.fasta("./Zikavirus.fasta") # Formato seqinr
 zVS <- read_fasta("./Zikavirus.fasta") # Formato bioseq
 
-# cV <- read.fasta("")  # Formato seqinr
-# cVS <- read_fasta("") # Formato bioseq
+cV <- read.fasta("./SARS.fasta")  # Formato seqinr
+cVS <- read_fasta("./SARS.fasta") # Formato bioseq
 
 wV <- read.fasta("./wuhan.fasta")  # Formato seqinr
 wVS <- read_fasta("./wuhan.fasta") # Formato bioseq
