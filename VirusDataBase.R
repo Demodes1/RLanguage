@@ -38,7 +38,7 @@ dVS <- read_fasta("./DengueVirus.fasta") # Formato bioseq
 
 sprintf("Virus del Zika: %a proteínas", length(zV[[1]]))
 sprintf("Virus Wuhan Hu-1: %s proteínas", length(wV[[1]]))
-#sprintf("Virus : %s proteínas", length(zV[[1]]))
+sprintf("Virus del SARS : % proteínas", length(cV[[1]]))
 sprintf("Virus del MERS : %s proteínas", length(mV[[1]]))
 sprintf("Virus del Dengue: %s proteínas", length(dV[[1]]))
 
@@ -47,7 +47,7 @@ sprintf("Virus del Dengue: %s proteínas", length(dV[[1]]))
 
 count(zV[[1]],1) # Virus del Zika
 count(wV[[1]],1) # Virus del Wuhan-Hu-1
-#count(V[[1]],1) # Virus del
+count(cV[[1]],1) # Virus del SARS
 count(mV[[1]],1) # Virus del MERS
 count(dV[[1]],1) # Virus del Dengue
 
@@ -56,7 +56,7 @@ count(dV[[1]],1) # Virus del Dengue
 
 print(GC(zV[[1]])) # Virus del Zika
 print(GC(wV[[1]])) # Virus del Wuhan-Hu-1
-# print(GC(V[[1]])) # Virus del 
+print(GC(cV[[1]])) # Virus del SARS
 print(GC(mV[[1]])) # Virus del MERS
 print(GC(dV[[1]])) # Virus del Dengue
 
@@ -70,9 +70,9 @@ wVSC <- seq_complement(wVS) # Virus del Wuhan-Hu-1
 sprintf("Virus original %s ", wVS)
 sprintf("Complementaria %s ", wVSC)
 
-#zVSC <- seq_complement(zVS) # Virus del 
-#sprintf("Virus original %s ", zVS)
-#sprintf("Complementaria %s ", zVSC)
+cVSC <- seq_complement(zVS) # Virus del SARS
+sprintf("Virus original %s ", cVS)
+sprintf("Complementaria %s ", cVSC)
 
 mVSC <- seq_complement(zVS) # Virus del 
 sprintf("Virus original %s ", mVS)
