@@ -6,7 +6,7 @@ library(bioseq)
 # Guillermo Esquivel Ortiz A01625621
 # Pablo Erhard Hernandez A01721124
 # Santiago Santos Bante A01731506
-#
+# Pedro Fernandez Merino A01733006
 # *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
 
 # Secuencias de entidades estudiadas :
