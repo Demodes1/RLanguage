@@ -2,7 +2,7 @@ library("seqinr")
 library(bioseq)
 # *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
 # Trabajo elaborado por:
-# Arnold Ponce A
+# Arnold Ponce A01625647
 # Guillermo Esquivel Ortiz A01625621
 # Pablo Erhard Hernandez A01721124
 # Santiago Santos Bante A01731506
@@ -27,8 +27,8 @@ cVS <- read_fasta("./SARS.fasta") # Formato bioseq
 wV <- read.fasta("./wuhan.fasta")  # Formato seqinr
 wVS <- read_fasta("./wuhan.fasta") # Formato bioseq
 
-mV <- read.fasta("./MERS")  # Formato seqinr
-mVS <- read_fasta("./MERS") # Formato bioseq
+mV <- read.fasta("./MERS.fasta")  # Formato seqinr
+mVS <- read_fasta("./MERS.fasta") # Formato bioseq
 
 dV <- read.fasta("./DengueVirus.fasta")  # Formato seqinr
 dVS <- read_fasta("./DengueVirus.fasta") # Formato bioseq
@@ -36,9 +36,9 @@ dVS <- read_fasta("./DengueVirus.fasta") # Formato bioseq
 
 # ----------- ¿Cual es el tamaño de cada secuencia? -----------
 
-sprintf("Virus del Zika: %a proteínas", length(zV[[1]]))
+sprintf("Virus del Zika: %s proteínas", length(zV[[1]]))
 sprintf("Virus Wuhan Hu-1: %s proteínas", length(wV[[1]]))
-sprintf("Virus del SARS : % proteínas", length(cV[[1]]))
+sprintf("Virus del SARS : %s proteínas", length(cV[[1]]))
 sprintf("Virus del MERS : %s proteínas", length(mV[[1]]))
 sprintf("Virus del Dengue: %s proteínas", length(dV[[1]]))
 
@@ -83,6 +83,12 @@ sprintf("Virus original %s ", dVS)
 sprintf("Complementaria %s ", dVSC)
 
 
+# Comparacion de la composicion de neuclotidos de las 5 secuencias
+# Opciones a comparar ----> zV, cV, wV, mV, dV, iV
+
+comp(dV,zV)
+
+
 # Segmentos del virus H1N1 de México en el 2008
 
 iV <- read_fasta("./InfluenzaAMex.fasta")
@@ -96,6 +102,18 @@ iVAA <- seq_translate(iVDNA) # Secuencia de aminoacidos del virus de la influenz
 iVDNAComp <- seq_complement(iVDNA) # Obtencion del complemento de la secuencia de ADN
 
 iVDNACompRev <- seq_reverse(iVDNAComp) # Secuencia complemento inversa
+
+
+
+# Funcion para la comparacion en composicion de nucleotidos
+
+comp <- function (seq1, seq2) {
+  par(mfrow=c(1,2))
+  barplot(table(seq1),col = 1:4)
+  barplot(table(seq2),col = 1:4)
+}
+
+
 
 
 
