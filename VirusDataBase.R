@@ -5,7 +5,7 @@ library(bioseq)
 # Arnold Ponce A
 # Guillermo Esquivel Ortiz A01625621
 # Pablo Erhard Hernandez A01721124
-#
+# Santiago Santos Bante A01731506
 #
 # *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
 
