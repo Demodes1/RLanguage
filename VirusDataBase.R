@@ -4,7 +4,7 @@ library(bioseq)
 # Trabajo elaborado por:
 # Arnold Ponce A
 # Guillermo Esquivel Ortiz A01625621
-#
+# Pablo Erhard Hernandez A01721124
 #
 #
 # *_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*_*
